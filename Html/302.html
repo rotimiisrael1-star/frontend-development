@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Experiment Tracking System</title>
+    <style>
+        /* Basic CSS for layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .navigation {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            color: #fff;
+            z-index: 999; /* Ensure it's above other content */
+        }
+        .navigation-icon {
+            cursor: pointer;
+        }
+        .navigation-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+        .navigation-items {
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .navigation.open .navigation-items {
+            display: flex;
+        }
+        .navigation-items a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .accordion {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .accordion:hover {
+            background-color: #555;
+        }
+        .panel {
+            padding: 0 10px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        .login-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+        .login-form input {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+            width: 100%;
+        }
+        .login-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laboratory Experiment Tracking System</h1>
+    </header>
+    <div class="navigation">
+        <div class="navigation-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navigation-items">
+            <button class="accordion">Experiment Tracking</button>
+            <div class="panel">
+                <ul>
+                    <li>Form or interface for creating new experiments, including fields for experiment title, description, date, researcher(s), associated laboratory equipment, and experimental procedures.</li>
+                    <li>Ability to view and edit existing experiments, including updating experimental data and status.</li>
+                </ul>
+            </div>
+            <button class="accordion">Inventory Management</button>
+            <div class="panel">
+                <ul>
+                    <li>Inventory management features to track laboratory equipment, chemicals, samples, and other resources.</li>
+                    <li>Functionality to add, update, and remove inventory items, including fields for item name, description, quantity, location, and supplier information.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <h2>Welcome to the Laboratory Experiment Tracking System</h2>
+            <p>This system helps you track and manage your laboratory experiments efficiently.</p>
+            <p>Key Features:</p>
+            <ul>
+                <li>Experiment Management</li>
+                <li>Inventory Tracking</li>
+                <li>Reporting and Analytics</li>
+            </ul>
+            <div class="login-form" id="loginForm">
+                <form>
+                    <input type="text" placeholder="Username" name="username" required><br>
+                    <input type="password" placeholder="Password" name="password" required><br>
+                    <button type="button" onclick="login()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navigationMenu = document.querySelector('.navigation');
+            navigationMenu.classList.toggle('open');
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        function login() {
+            // You can add login functionality here
+            alert("Login button clicked!");
+        }
+    </script>
+</body>
+</html>

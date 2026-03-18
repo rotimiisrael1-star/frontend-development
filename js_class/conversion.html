@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4>Insert your age</h4>
+    <input type="text" id="hi">
+    <button id="">Apply</button>
+    <script>
+
+
+        <!-- let userage = prompt('Your age?');
+        let admission = (userage > 18)? 'access granted' : 'access denied'
+
+        
+
+
+        if (userage > 18) {
+            alert('access granted');
+        }
+        else {
+            alert('access denied');
+        }
+        alert(admission) -->
+
+        
+
+        function admission(){
+            let userage=document.getElementById('mypass').value;
+            let apply;
+            if(userage>=25){
+                apply='you are old enough';
+            }
+            else{
+                apply='you are to young';
+            }
+            document.getElementById('result').innerHTML=`${apply} to apply`;
+        }
+    </script>
+</body>
+</html>

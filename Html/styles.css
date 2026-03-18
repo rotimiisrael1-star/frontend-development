@@ -1,0 +1,19 @@
+body{
+    font-size: 18px;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 20px 30px 40px;
+}
+.second{
+    background-color: aqua;
+    border-width: 2px;
+    margin: 20px;
+}
+.first{
+    margin: 50px;
+}

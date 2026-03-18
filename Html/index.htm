@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Experiment Tracking System</title>
+</head>
+<body>
+    <header>
+        <h1>Laboratory Experiment Tracking System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#experiment">Experiment Management</a>
+                <ul>
+                    <li><a href="#create-experiment">Create Experiment</a></li>
+                    <li><a href="#track-progress">Track Progress</a></li>
+                </ul>
+            </li>
+            <li><a href="#inventory">Inventory and Resource Management</a>
+                <ul>
+                    <li><a href="#manage-inventory">Manage Inventory</a></li>
+                    <li><a href="#track-availability">Track Availability</a></li>
+                </ul>
+            </li>
+            <li><a href="#visualization">Data Visualization and Analysis</a>
+                <ul>
+                    <li><a href="#graphs">Graphs</a></li>
+                    <li><a href="#charts">Charts</a></li>
+                </ul>
+            </li>
+            <li><a href="#search-filter">Search and Filtering</a></li>
+            <li><a href="#notifications">Notifications and Alerts</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <!-- Signup form -->
+        <div id="signup" style="display:none;">
+            <h2>Sign Up</h2>
+            <form action="/signup" method="post">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required><br>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Signin form -->
+        <div id="signin" style="display:none;">
+            <h2>Sign In</h2>
+            <form action="/signin" method="post">
+                <label for="signin-username">Username:</label>
+                <input type="text" id="signin-username" name="username" required><br>
+                <label for="signin-password">Password:</label>
+                <input type="password" id="signin-password" name="password" required><br>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard">
+            <h2>Dashboard</h2>
+            <!-- Dashboard content goes here -->
+        </div>
+
+        <!-- Experiment Management -->
+        <div id="experiment">
+            <h2>Experiment Management</h2>
+            <!-- Experiment management content goes here -->
+        </div>
+
+        <!-- Inventory and Resource Management -->
+        <div id="inventory">
+            <h2>Inventory and Resource Management</h2>
+            <!-- Inventory management content goes here -->
+        </div>
+
+        <!-- Data Visualization and Analysis -->
+        <div id="visualization">
+            <h2>Data Visualization and Analysis</h2>
+            <!-- Visualization content goes here -->
+        </div>
+
+        <!-- Search and Filtering -->
+        <div id="search-filter">
+            <h2>Search and Filtering</h2>
+            <!-- Search and filtering content goes here -->
+        </div>
+
+        <!-- Notifications and Alerts -->
+        <div id="notifications">
+            <h2>Notifications and Alerts</h2>
+            <!-- Notifications and alerts content goes here -->
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle between signup and signin forms
+        function toggleForm(formId) {
+            var signupForm = document.getElementById('signup');
+            var signinForm = document.getElementById('signin');
+
+            if (formId === 'signup') {
+                signupForm.style.display = 'block';
+                signinForm.style.display = 'none';
+            } else {
+                signupForm.style.display = 'none';
+                signinForm.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

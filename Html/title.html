@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Experiment Tracking System</title>
+    <style>
+        /* Basic CSS for layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .navigation {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            color: #fff;
+            z-index: 999; /* Ensure it's above other content */
+        }
+        .navigation-icon {
+            cursor: pointer;
+        }
+        .navigation-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+        .navigation-items {
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .navigation.open .navigation-items {
+            display: flex;
+        }
+        .navigation-items a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .login-form, .registration-form {
+            display: none;
+        }
+        .show-form {
+            display: block;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laboratory Experiment Tracking System</h1>
+    </header>
+    <div class="navigation">
+        <div class="navigation-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navigation-items">
+            <a href="#" onclick="showForm('loginForm')">Sign In</a>
+            <a href="#" onclick="showForm('registrationForm')">Sign Up</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <h2>Welcome to the Laboratory Experiment Tracking System</h2>
+            <p>This system is designed to help you track and manage your laboratory experiments efficiently. Whether you're a researcher, scientist, or student, our platform provides tools for experiment management, inventory tracking, and reporting.</p>
+            <p>Key Features:</p>
+            <ul>
+                <li>Experiment Management</li>
+                <li>Inventory Tracking</li>
+                <li>Reporting and Analytics</li>
+            </ul>
+            <div class="button-container">
+                <button onclick="showForm('loginForm')">Sign In</button>
+                <button onclick="showForm('registrationForm')">Sign Up</button>
+            </div>
+            <div class="login-form" id="loginForm">
+                <form method="post" action="login.php">
+                    <input type="text" placeholder="Username" name="username" required><br>
+                    <input type="password" placeholder="Password" name="password" required><br>
+                    <button type="submit" name="login">Login</button>
+                </form>
+            </div>
+            <div class="registration-form" id="registrationForm">
+                <form method="post" action="register.php">
+                    <input type="text" placeholder="Username" name="username" required><br>
+                    <input type="password" placeholder="Password" name="password" required><br>
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" required><br>
+                    <button type="submit" name="register">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Laboratory Experiment Tracking System</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navigationMenu = document.querySelector('.navigation');
+            navigationMenu.classList.toggle('open');
+        }
+
+        function showForm(formId) {
+            var forms = document.querySelectorAll('.login-form, .registration-form');
+            for (var i = 0; i < forms.length; i++) {
+                forms[i].classList.remove('show-form');
+            }
+            document.getElementById(formId).classList.add('show-form');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js class</title>
+</head>
+<body>
+    <Script>
+        
+        let myAge = 3;
+        let year = 0;
+
+        alert(myAge/year)
+        
+        let person = {
+            surname: "Ola",
+            firstname: "Tunji",
+            Age: 23,
+            Occupation: "Teacher",
+            African: "True",
+
+             
+        };
+
+        alert(`welcome ${person.firstname}
+        ${person.surname} to class`);
+
+        let restaurant = {
+            name: 'food mataz',
+            Africandish: {
+                swallow: ['eba', 'fufu', 'Akpu'],
+                soup: ['egusi', 'Okro', 'Ofada'],
+                meat: ['beef', 'chicken', 'fish']
+            },
+            chinesedish: {
+                meat: ['frog', 'crab'],
+                rice: ['Chinese rice', 'ofada']
+            },
+
+            drinks: {
+                drink: ['origin', 'coke'],
+                amount:  ['#3000'],
+                location: 'u.i ibadan'
+            }
+        };
+
+        alert(`I need ${restaurant.name[0]}, ${restaurant.Africandish.swallow[1]}, 
+        with ${restaurant.Africandish.soup[0]},
+        and ${restaurant.Africandish.meat[1]},
+            ${restaurant.drinks.drink[1]},
+            ${restaurant.drinks.amount[0]},
+            ${restaurant.drinks.location}`);
+    </Script>
+</body>
+</html>

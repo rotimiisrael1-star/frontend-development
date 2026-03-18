@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+    <label for="">Age:</label>
+    <input type="text" id="age"><br><br>
+
+    <label for="">Gender:</label>
+    <input type="text" id="gender"><br><br>
+
+   <button onclick="access()">Getdrink</button>
+   <h3 id="set" style="color: green;"></h3><br><br>
+    <script>
+        function.access(){
+            let age=document.getElementById('age').value;
+            let gender=Number(document.getElementById('gender').value;)
+            let Getdrink;
+            if(!age||isNAN(age)){
+                Getdrink= 'Pls insert a valid number';
+                document.getElementById('set');
+            }
+            else if(!gender||isNAN(gender)){
+                Getdrink= 'Pls insert a valid gender';
+                document.getElementById('set');
+            }
+            else if(age<=15){
+                Getdrink= 'You get water';
+                document.getElementById('set');
+            }
+            else if((age<=18 && gender=='male')){
+                Getdrink= 'You get energy drink';
+                document.getElementById('set');
+            }
+            else if((age<=18 && gender=='female')){
+                Getdrink= 'You get fanta';
+                document.getElementById('set');
+            }
+            else if(age<=25 && gender==male){
+                Getdrink= 'You get red wine';
+                document.getElementById('set');
+            }  
+            else if((age<=25 && gender==female)){
+                Getdrink= 'You get energy drink';
+                document.getElementById('set');
+            } 
+            else if((age<=60 && gender==male)){
+                Getdrink= 'You get beer';
+                document.getElementById('set');
+            } 
+            else if((age<=60 && gender==female)){
+                Getdrink= 'You get red wine';
+                document.getElementById('set');
+            } 
+            else{
+                Getdrink='Insert your age and gender';
+                document.getElementById('set');
+            }
+        }
+
+
+        <!-- let x = prompt('current age?');
+        let y = 5;
+        alert(-x + y);
+
+        let a = '3';
+        let b = 3;
+
+        let c = a ** b;  // Exponentiation (3^3)
+        console.log(c);  // Outputs: 27
+
+        console.log(b % a);  // Modulus (remainder of 3 divided by 3)
+        console.log(a += b); // String concatenation, a becomes '33'
+        console.log(a !== b); // Strict inequality, '33' (string) is not equal to 3 (number), so this is true
+
+        let age = prompt('your age?');
+        let gender = prompt('male/female');
+
+        if (age < 18) {
+            console.log('only water');
+        } 
+        else if (age >= 18 && gender === 'female') {
+            console.log('take coke');
+        } 
+        else if (age >= 18 && gender === 'male') {
+            console.log('take beer');
+        } 
+        else {
+            console.log('nothing for you');
+        }
+
+        let userage = prompt('Your age?');
+        let admission = (userage>18)?
+
+        if (userage>18) {
+        alert('access granted');
+        }
+        else{
+            alert('access denied');
+        } -->
+
+    </script>
+</body>
+
+</html>
